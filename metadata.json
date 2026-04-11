@@ -1,0 +1,5 @@
+{
+  "name": "Meta-Cognitive Context Loom Visualizer",
+  "description": "An interactive web application to visualize and explore the hierarchical structure of the Meta-Cognitive Context Loom protocol data.",
+  "requestFramePermissions": []
+}
