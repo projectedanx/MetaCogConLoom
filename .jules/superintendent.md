@@ -1,0 +1,2 @@
+- **Instability**: Application logic was bleeding into the root directory, violating architectural boundaries. `package.json` contained loose version ranges (`^`, `~`), risking non-deterministic upstream drift.
+- **Fortification**: Enforced strict root hygiene by quarantining all source assets into `/src`. Realigned Vite and TypeScript configurations to point to the bounded context. Eradicated floating dependency ranges in `package.json` via strict version pinning.
