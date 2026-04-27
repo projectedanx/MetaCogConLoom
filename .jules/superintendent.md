@@ -1,2 +1,4 @@
 - **Instability**: Application logic was bleeding into the root directory, violating architectural boundaries. `package.json` contained loose version ranges (`^`, `~`), risking non-deterministic upstream drift.
 - **Fortification**: Enforced strict root hygiene by quarantining all source assets into `/src`. Realigned Vite and TypeScript configurations to point to the bounded context. Eradicated floating dependency ranges in `package.json` via strict version pinning.
+- **Instability:** Missing local dependency installation led to Vite not found error on build (`npm run build` failed).
+- **Fortification:** Executed `npm install` to hydrate local `node_modules` environment. Successfully ran `npm run build` post-hydration. Integrated `LEXICON.md` contents by dynamically converting to JSON using a Python script and wiring `src/App.tsx` with a dual-tab layout to support multiple domain contexts without schema overlap.

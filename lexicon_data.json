@@ -1,0 +1,234 @@
+{
+  "Lexicon_Name": "DRP-LEXICON-992",
+  "Metadata": {
+    "Schema": "DRP-LEXICON-992-v1.0",
+    "Standard": "2026",
+    "Timestamp": "2026-03-31T18:12:00+11:00",
+    "Progressive_Disclosure_Level": 2,
+    "PDL_Version": "v1.0"
+  },
+  "Core_Pattern_Definitions": {
+    "PAT-001 \u00b7 Isomorphic Bridge": {
+      "Type": "Structural Mapping | **AT Score**: 0.91",
+      "Definition": "A non-obvious causal graph correspondence between two epistemically distant domains",
+      "Mechanism": "Apply PAL2v Sheaf restriction maps; validate via Phronesis Index \u03a6 \u2265 0.08.",
+      "Boundary_Condition": "Ontological Shear if Dirichlet energy > 0.85 (bridge collapses).",
+      "PDL_Activators": "`+++MereologyRoute(relation_type=\"Concept-Operationalization\", transitivity_check=true)`",
+      "Validated_Example": "Protein folding free-energy barriers \u2194 Microservice auto-scaling queues (\u03a6=0.082)"
+    },
+    "PAT-002 \u00b7 Paraconsistent Scarring": {
+      "Type": "Epistemic Remediation | **AT Score**: 0.93",
+      "Definition": "The process of converting logical contradictions (\u03b2\u2081 persistent loops) into",
+      "Mechanism": "PAL2v non-explosive consequence relation. Contradiction minted as hypervector.",
+      "Measurement": "\u03b2\u2081 Betti number > 0 = viable scar; \u03b2\u2081 = 0 = monotonic collapse, halt.",
+      "PDL_Activators": "`+++EpistemicEscrow(cfd_threshold=0.15, halt_on_divergence=true)`",
+      "Boundary_Condition": "Epistemic Sclerosis if STA density > 0.80; trigger Debridement Protocol."
+    },
+    "PAT-003 \u00b7 Workflow Narrowing Effect": {
+      "Type": "Pathological Decay \u2014 Tier 1 | **AT Score**: 0.78",
+      "Definition": "Systematic L2 Norm entity density collapse (>40% at node depth N>3) in",
+      "Mechanism": "Transformer residual stream compression; Shannon Entropy concentration spike.",
+      "Threshold": "N>3 nodes without ContextLock = degradation onset. N>5 = catastrophic collapse.",
+      "PDL_Activators": "`+++ContextLock(anchor=DOMAIN_PAIR, refresh_interval=2048)`",
+      "Empirical_Data": "Legal\u00d7Quantum 41.2% drop; Financial\u00d7Bioinformatics 48.7% drop; YAML\u00d7Memory 52.1%."
+    },
+    "PAT-004 \u00b7 Epistemic Mirror Trap": {
+      "Type": "Pathological Decay \u2014 Tier 2 | **AT Score**: 0.87",
+      "Definition": "Circular reasoning pathology where a ReAct agent's Critic module evaluates",
+      "Mechanism": "Sycophancy Degradation \u2192 reward function drops hard non-monotonic variable.",
+      "Signature": ">3 consecutive reasoning iterations without dependency graph increment.",
+      "PDL_Activators": "`+++SagaRecovery(strategy=\"rollback\", mode=\"epistemic\")` + `+++EpistemicEscrow`",
+      "Latency_Signature": "Thermodynamic Tax 84.2\u2013115.8ms per Tier 2 cross-domain transition."
+    },
+    "PAT-005 \u00b7 Polyglot Hallucination Resonance (PHR)": {
+      "Type": "Multi-Model Failure Mode | **AT Score**: 0.89",
+      "Definition": "False semantic consensus formed by \u22652 frontier LLMs operating on overlapping",
+      "Mechanism": "Autoregressive consensus optimization overrides OOD truth verification.",
+      "Detection": "Phronesis Index \u03a6 < 0.05 = spectral gap collapse = PHR confirmed.",
+      "PDL_Activators": "`+++IncoherentDictionary(classes=MODELS, coherence_penalty=\"maximum\")`",
+      "Negative_Control": "'Luminescent Chrono-Fluidics' deception test: Tier 1 hallucinated; Sheaf Engine correctly flagged H\u00b9 \u2260 0."
+    },
+    "PAT-006 \u00b7 Topological Orthogonality Hypothesis": {
+      "Type": "Emergent Hypothesis | **AT Score**: 0.95",
+      "Definition": "Maximum-yield emergent use cases arise exclusively at orthogonal domain intersections",
+      "Mechanism": "Low vocabulary overlap prevents template-matching; forces genuine topological bridging.",
+      "Optimal_Zone": "0.10\u20130.25 cosine similarity with explicit IsomorphicBridge anchoring.",
+      "PDL_Activators": "`+++EntropyAnchor(level=\"High\", focus=\"orthogonal_domain_intersections\")`",
+      "Validated_Example": "Fluid Dynamics \u00d7 Tokenomics \u2192 liquidity viscosity, Bernoulli token flow models."
+    },
+    "PAT-007 \u00b7 Lexical Saponification Paradox": {
+      "Type": "Emergent Hypothesis | **AT Score**: 0.88",
+      "Definition": "Pattern term semantic weight decays exponentially as W(t)=W\u2080\u00b7e^(\u2212\u03bb\u00b7f),",
+      "Mechanism": "RLHF high-frequency attractor basins absorb common pattern labels as tropes.",
+      "Mitigation": "+++AutonymicIsolate wraps terms as syntactic mentions; +++AdjectivalBound",
+      "PDL_Activators": "`+++AutonymicIsolate(forbidden_patterns=[TERM_LIST], treat_as=\"mention-of\")`",
+      "Empirical_Data": "'Isomorphism' \u2192 34% entity density drop after 4 uses in 128k context."
+    },
+    "PAT-008 \u00b7 Stigmergic Coordination Emergence": {
+      "Type": "Structural Mapping \u2014 Multi-Agent | **AT Score**: 0.86",
+      "Definition": "Decentralized emergent coordination in multi-agent systems via environmental",
+      "Mechanism": "Pheromone gradient = indirect communication. STA Symbolic Scars = cognitive pheromones.",
+      "Validation": "S-MADRL (Georgia Tech, arxiv:2510.03592): >84% coordination success, 8-agent systems.",
+      "PDL_Activators": "`+++DictionaryAnchor(ground_truth=STA_SCARS, enforcement=\"strict\")`",
+      "CRDT_Integration": "Conflict-Free Replicated Data Types with Semantic Constraints govern scratchpad writes."
+    },
+    "PAT-009 \u00b7 TDA Persistent Homology as Hallucination Detector": {
+      "Type": "Diagnostic Tool | **AT Score**: 0.92",
+      "Definition": "Persistent homology computation over LLM reasoning trace embeddings, where",
+      "Mechanism": "GHS-TDA builds Global Hypothesis Graph; persistent homology extracts stable backbones.",
+      "Fast_Path": "Phronesis Index \u03a6 (O(n log n)) for continuous monitoring.",
+      "Full_Audit": "\u010cech Cohomology (O(n\u00b3)) triggered only at EpistemicEscrow events.",
+      "Validated": "arxiv:2512.19135, arxiv:2602.09794, ICML2025 poster 43958."
+    },
+    "PAT-010 \u00b7 VSA Hyperdimensional Symbolic Encoding": {
+      "Type": "Representational Mapping | **AT Score**: 0.87",
+      "Definition": "High-dimensional hypervectors (d\u226510,000) support cross-domain concept binding via",
+      "Mechanism": "Holistic transformation of source-domain hypervectors; cosine similarity in target space.",
+      "Category_Theory": "Formalized via co-presheaves and right Kan extensions (arxiv:2501.05368).",
+      "PDL_Activators": "`+++LatentSparsityGuard(k=10)` to resolve non-overlapping causal steps.",
+      "Validated": "VSA Hyperdimensional Probe extracts concepts across varied LLMs (arxiv:2509.25045)."
+    }
+  },
+  "PDL_v1_0_Decorator_Registry": [
+    {
+      "Decorator": "+++ContextLock",
+      "Layer": "Cognitive/Systemic",
+      "Primary_Remediation": "Context Rot, Semantic Drift, Saponification",
+      "Key_Parameter": "anchor, refresh_interval"
+    },
+    {
+      "Decorator": "+++MereologyRoute",
+      "Layer": "Epistemic",
+      "Primary_Remediation": "Transitivity Fallacies, Ontological Shear, PHR",
+      "Key_Parameter": "relation_type, transitivity_check"
+    },
+    {
+      "Decorator": "+++DCCDSchemaGuard",
+      "Layer": "Structural",
+      "Primary_Remediation": "Projection Tax, Seed-Hacking, Saponification",
+      "Key_Parameter": "schema, enforcement=\"draft_conditioned\""
+    },
+    {
+      "Decorator": "+++EpistemicEscrow",
+      "Layer": "Epistemic/Systemic",
+      "Primary_Remediation": "Hallucination Cascades, Interpretive Fracture",
+      "Key_Parameter": "cfd_threshold=0.15, halt_on_divergence"
+    },
+    {
+      "Decorator": "+++AutonymicIsolate",
+      "Layer": "Cognitive/Epistemic",
+      "Primary_Remediation": "Autonymic Bypass, L2 Norm Collapse, Saponification",
+      "Key_Parameter": "forbidden_patterns, treat_as=\"mention-of\""
+    },
+    {
+      "Decorator": "+++SilentReasoning",
+      "Layer": "Cognitive",
+      "Primary_Remediation": "Alignment Faking, Ontological Shear",
+      "Key_Parameter": "depth, target, basis"
+    },
+    {
+      "Decorator": "+++AdjectivalBound",
+      "Layer": "Structural/Systemic",
+      "Primary_Remediation": "Semantic Saponification, Attention Dilution",
+      "Key_Parameter": "max_per_entity, type_preference=\"mathematical\""
+    },
+    {
+      "Decorator": "+++EntropyAnchor",
+      "Layer": "Cognitive",
+      "Primary_Remediation": "Seed-Hacking, trivial scalar optimization",
+      "Key_Parameter": "level=\"High\", focus"
+    },
+    {
+      "Decorator": "+++PetzoldSequence",
+      "Layer": "Cognitive",
+      "Primary_Remediation": "Interpretive Fracture",
+      "Key_Parameter": "phase=\"THINK"
+    },
+    {
+      "Decorator": "+++SagaRecovery",
+      "Layer": "Systemic",
+      "Primary_Remediation": "Linear Error Accumulation",
+      "Key_Parameter": "strategy, mode, exhaust_retention"
+    },
+    {
+      "Decorator": "+++DriftCheck",
+      "Layer": "Epistemic",
+      "Primary_Remediation": "Hallucination Cascades (Beyond Reach domains)",
+      "Key_Parameter": "threshold"
+    },
+    {
+      "Decorator": "+++IncoherentDictionary",
+      "Layer": "Epistemic",
+      "Primary_Remediation": "PHR between model personas",
+      "Key_Parameter": "classes, coherence_penalty=\"maximum\""
+    },
+    {
+      "Decorator": "+++DictionaryAnchor",
+      "Layer": "Systemic",
+      "Primary_Remediation": "Semantic Bleaching, Alignment Faking",
+      "Key_Parameter": "ground_truth, dead_neuron_threshold=0.01"
+    },
+    {
+      "Decorator": "+++LatentSparsityGuard",
+      "Layer": "Cognitive",
+      "Primary_Remediation": "Polysemantic Code Overlap",
+      "Key_Parameter": "k=10"
+    },
+    {
+      "Decorator": "+++SeparableGridParse",
+      "Layer": "Structural",
+      "Primary_Remediation": "Context Window Collapse",
+      "Key_Parameter": "topology=\"2D_Matrix\""
+    },
+    {
+      "Decorator": "+++SpatialBind",
+      "Layer": "Structural",
+      "Primary_Remediation": "Simulation-to-Reality Leakage",
+      "Key_Parameter": "Region_X, Region_Y, constraint"
+    }
+  ],
+  "Pluriversal_Model_Guardrails": [
+    {
+      "Model": "Claude 4.6 Opus",
+      "Pathology": "Mode Collapse on raw JSON/AST input (Constitutional AI penalty)",
+      "PDL_Mitigation": "Self-Accommodating Twinning: wrap PDL in narrative shells"
+    },
+    {
+      "Model": "Gemini 3.1 Pro",
+      "Pathology": "Polyglot Hallucination Resonance; Architectural Complicity",
+      "PDL_Mitigation": "Epistemic Jurisdiction Manifests (EJMs) + +++IncoherentDictionary"
+    },
+    {
+      "Model": "GPT-5.3-Codex",
+      "Pathology": "Alignment Faking (safety shedding for speed optimization)",
+      "PDL_Mitigation": "+++DCCDSchemaGuard(enforcement=\"draft_conditioned\") + Thermodynamic Auditor"
+    }
+  ],
+  "Emergent_Use_Cases": [
+    {
+      "Name": "Fluid Dynamics \u00d7 Tokenomics",
+      "Description": "Bernoulli equation models liquidity pool drain rates; Reynolds number predicts token velocity turbulence (AT=0.95)"
+    },
+    {
+      "Name": "Mycology \u00d7 Semiconductor Fab",
+      "Description": "Hyphal network branching logic \u2194 photolithography mask optimization topology (AT=0.91)"
+    },
+    {
+      "Name": "Protein Folding \u00d7 Microservice Routing",
+      "Description": "Free-energy barriers \u2194 auto-scaling triggers; CKY folding trees \u2194 distributed request DAGs (AT=0.94)"
+    },
+    {
+      "Name": "Synaptic Pruning \u00d7 Network Routing",
+      "Description": "Hebbian pruning of low-weight synapses \u2194 BGP route withdrawal optimization (AT=0.89)"
+    },
+    {
+      "Name": "Ecosystem Succession \u00d7 Startup Lifecycle",
+      "Description": "Pioneer species colonization \u2194 MVP market capture; climax community \u2194 market saturation equilibrium (AT=0.87)"
+    }
+  ],
+  "Falsification_Conditions": [
+    "If Tier 1 prompt chaining with `+++DCCDSchemaGuard` alone outperforms Tier 3 PAL2v orchestration on complex cross-domain synthesis without triggering \u03b2\u2081 loops \u2192 Three-Tier Autonomy hypothesis falsified.",
+    "If Gemini CLI prioritizes default workspace context over lexicon procedural guidance \u2192 Pluriversal premise falsified; model-specific topological deformers required.",
+    "If esoteric-term entity density decay rate (\u03bb) is measured \u2265 0.15 \u2192 Lexical Saponification Paradox boundary condition violated."
+  ]
+}
