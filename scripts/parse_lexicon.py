@@ -2,7 +2,7 @@ import json
 import re
 
 def parse_lexicon():
-    with open('LEXICON.md', 'r') as f:
+    with open('../LEXICON.md', 'r') as f:
         content = f.read()
 
     data = {
@@ -97,7 +97,7 @@ def parse_lexicon():
             if line.startswith('- '):
                 data["Falsification_Conditions"].append(line[2:].strip())
 
-    with open('lexicon_data.json', 'w') as f:
+    with open('../src/data/lexicon_data.json', 'w') as f:
         json.dump(data, f, indent=2)
 
 if __name__ == '__main__':

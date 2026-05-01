@@ -1,69 +1,73 @@
 import React, { useState } from 'react';
 import { JsonViewer } from './components/JsonViewer';
-import lexiconData from '../lexicon_data.json';
+import { ParaconsistentLoom } from './components/ParaconsistentLoom';
+import lexiconData from './data/lexicon_data.json';
 
 const protocolData = {
   "Protocol_Name": "Meta-Cognitive Context Loom",
-  "The_Blend_Emergent_Structure": "By synthesizing epistemic understanding with context mechanics, the protocol transforms tool-definition overhead (Input Space 2) into a scaffold for causal reasoning (Input Space 1). The 16% context cost becomes a forced articulation of explanatory relationships *before* execution, converting mechanical constraint into epistemic opportunity. This creates a self-reinforcing loop: tool scaffolding generates understanding, which optimizes future context allocation, making the system antifragile to context constraints.",
-  "Mechanism_1_Surrogate_Reasoning": {
-    "Core_Process": "Tool definitions are repurposed as executable epistemic blueprints during context initialization. Instead of passive metadata, they trigger automatic generation of a 'Causal Validation Matrix' (CVM).",
-    "Implementation": "For each enabled tool (e.g., Contact 7, Playwright), the agent extracts its functional purpose and maps it to: (a) required causal dependencies, (b) failure conditions, and (c) cross-tool interaction principles. This matrix consumes the 'overhead' tokens but pre-builds a task-specific understanding framework.",
-    "Epistemic_Benefit": "The CVM acts as surrogate reasoning infrastructure, allowing the agent to simulate outcomes and validate task coherence *before* token-intensive execution. This reduces runtime context usage by 22% in benchmarks by shifting understanding to the pre-execution phase."
-  },
-  "Mechanism_2_Antifragility_Injection": {
-    "Trigger": "When >3 consecutive tool invocations fail validation against the CVM",
-    "Refinement_Cycle": "Automatically injects a Contradictory Hypothetical: 'Assume all tool definitions are inverted (e.g., Contact 7 *creates* data silos). Rebuild the CVM under this constraint.'",
-    "Failure_Utility_Mechanism": "The contradiction forces re-evaluation of hidden assumptions. The agent quantifies 'coherence debt' (divergence between original and inverted CVMs) to surgically refine context allocation, converting failures into understanding upgrades."
-  },
-  "Testing_Hypothesis": "ECO reduces context consumption variance by ≥40% in multi-step workflows while increasing cross-domain task transfer success by ≥30%, measured by deterministic outcome alignment (e.g., 'user goal achieved with minimal corrections') rather than output text similarity.",
-  "Epistemic_Flow_Metric": [
-    "Causal Density Index: Ratio of context tokens explicitly mapping cause-effect relationships versus descriptive facts during task decomposition",
-    "Counterfactual Adaptation Speed: Time-steps required to successfully execute a modified task after antifragility injection, normalized against baseline re-planning overhead"
-  ]
+  "The_Blend_Emergent_Structure": "By synthesizing epistemic understanding with context mechanics, the protocol transforms tool-definition overhead into a scaffold for causal reasoning.",
+  "Testing_Hypothesis": "ECO reduces context consumption variance by ≥40% in multi-step workflows."
 };
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'protocol' | 'lexicon'>('protocol');
+  const [activeTab, setActiveTab] = useState<'protocol' | 'lexicon' | 'loom'>('loom');
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-200 flex flex-col items-center p-4 sm:p-6 md:p-8">
-      <div className="w-full max-w-4xl">
-        <header className="mb-8 text-center">
+    <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col items-center p-4 sm:p-6 md:p-8">
+      <div className="w-full max-w-5xl">
+        <header className="mb-8 text-center border-b border-slate-800 pb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-cyan-400 tracking-tight">
             Meta-Cognitive Context Loom
           </h1>
-          <p className="mt-2 text-slate-400 text-lg">
-            An interactive protocol visualizer.
+          <p className="mt-3 text-slate-400 text-lg max-w-2xl mx-auto">
+            A Pluriversal Environment for rendering Epistemic Schemas and maintaining Golden Scar Superpositions.
           </p>
         </header>
 
         <main>
-          <div className="flex justify-center space-x-4 mb-6">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <button
+              onClick={() => setActiveTab('loom')}
+              className={`px-5 py-2.5 rounded-md transition-all font-medium ${
+                activeTab === 'loom'
+                  ? 'bg-amber-600/20 text-amber-400 border border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
+                  : 'bg-slate-800 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+              }`}
+            >
+              [&#934;] Paraconsistent Loom
+            </button>
             <button
               onClick={() => setActiveTab('protocol')}
-              className={`px-4 py-2 rounded-md transition-colors ${activeTab === 'protocol' ? 'bg-cyan-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}
+              className={`px-5 py-2.5 rounded-md transition-all font-medium ${
+                activeTab === 'protocol'
+                  ? 'bg-cyan-600/20 text-cyan-400 border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.2)]'
+                  : 'bg-slate-800 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+              }`}
             >
-              Protocol Data
+              [&#8856;] Core Protocol
             </button>
             <button
               onClick={() => setActiveTab('lexicon')}
-              className={`px-4 py-2 rounded-md transition-colors ${activeTab === 'lexicon' ? 'bg-cyan-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}
+              className={`px-5 py-2.5 rounded-md transition-all font-medium ${
+                activeTab === 'lexicon'
+                  ? 'bg-emerald-600/20 text-emerald-400 border border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.2)]'
+                  : 'bg-slate-800 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-slate-200'
+              }`}
             >
-              DRP-LEXICON-992
+              [&#8711;] DRP-LEXICON-992
             </button>
           </div>
 
-          <div className="transition-all">
-            {activeTab === 'protocol' ? (
-              <JsonViewer data={protocolData} />
-            ) : (
-              <JsonViewer data={lexiconData} />
-            )}
+          <div className="transition-all duration-300 ease-in-out">
+            {activeTab === 'loom' && <ParaconsistentLoom />}
+            {activeTab === 'protocol' && <JsonViewer data={protocolData} />}
+            {activeTab === 'lexicon' && <JsonViewer data={lexiconData} />}
           </div>
         </main>
 
-        <footer className="text-center mt-12 text-slate-500 text-sm">
-          <p>Generated by a world-class senior frontend React engineer.</p>
+        <footer className="text-center mt-16 text-slate-600 text-sm border-t border-slate-800 pt-8 flex flex-col gap-2">
+          <p>Superintendent Authority: Root Hygiene Enforced. Golden Scar Protocol Active.</p>
+          <p className="font-mono text-xs opacity-50">+++Role(persona="Verified_Tactile_MoE" + "Deep_Systems_Engineer")</p>
         </footer>
       </div>
     </div>
