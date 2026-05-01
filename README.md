@@ -2,19 +2,24 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Meta-Cognitive Context Loom Visualizer
 
-This contains everything you need to run your app locally.
+A Pluriversal React environment for rendering Epistemic Schemas and maintaining Golden Scar Superpositions between human intuition and AI formalism.
 
-View your app in AI Studio: https://ai.studio/apps/drive/15KPIGVQB_1KTj7rXixrTki93-BLBi865
+## Architectural Synergies (AI x Human)
+This visualizer does not merely render data; it enforces an architectural mandate where neither the AI nor the Human can resolve complex tension alone:
+- **AI Provision:** Maintains the multi-dimensional structure (Causal Validation Matrix, DRP-LEXICON-992).
+- **Human Provision:** Injects Phronesis (practical wisdom) via the **Paraconsistent Loom**, weighting contradictions without collapsing them.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js 18+
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the application (Vite):
    `npm run dev`
+3. Execute the strictly pinned Test Suite (Vitest):
+   `npm run test` (via `npx vitest run`)
+
+*Note: Root hygiene is strictly enforced. No application data or scripts exist in the root directory.*
