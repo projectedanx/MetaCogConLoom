@@ -8,8 +8,11 @@ A Pluriversal React environment for rendering Epistemic Schemas and maintaining 
 
 ## Architectural Synergies (AI x Human)
 This visualizer does not merely render data; it enforces an architectural mandate where neither the AI nor the Human can resolve complex tension alone:
-- **AI Provision:** Maintains the multi-dimensional structure (Causal Validation Matrix, DRP-LEXICON-992).
-- **Human Provision:** Injects Phronesis (practical wisdom) via the **Paraconsistent Loom**, weighting contradictions without collapsing them.
+- **AI Provision:** Maintains the multi-dimensional structure (Causal Validation Matrix, DRP-LEXICON-992). Generates rigid structural constraints and maps the negative space of known failure modes.
+- **Human Provision:** Injects Phronesis (practical wisdom) via the **Paraconsistent Loom**, weighting contradictions without collapsing them. Navigates the positive space left open by the AI's boundaries.
+
+## The Agent Inversion Strategy
+The repository implements an **Epistemic Escrow Circuit Breaker**. Instead of the AI attempting to hallucinate a resolution when contradictions peak, the system physically halts execution when the Contradiction/Fracture/Divergence Index (CFDI) exceeds 0.15. It explicitly requires the human to apply a topological deformer to resolve the state, ensuring that agentic autonomy is derived from its rigorous ability to refuse invalid states.
 
 ## Run Locally
 
