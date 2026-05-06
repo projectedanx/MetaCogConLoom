@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { JsonViewer } from './components/JsonViewer';
 import { ParaconsistentLoom } from './components/ParaconsistentLoom';
+import { EpistemicEscrowBreaker } from './components/EpistemicEscrowBreaker';
 import lexiconData from './data/lexicon_data.json';
 
 const protocolData = {
@@ -12,6 +13,23 @@ const protocolData = {
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'protocol' | 'lexicon' | 'loom'>('loom');
 
+  // Agentic Emergence State
+  const [globalCfdi, setGlobalCfdi] = useState<number>(0.08);
+  const [activeContradictions, setActiveContradictions] = useState<string[]>([]);
+
+  const handleSimulateContradiction = () => {
+    setGlobalCfdi(0.18);
+    setActiveContradictions([
+      "Mereological Mandate Violation: Microservice attempting to inherit aggregate root state.",
+      "Shared Database Anathema: Tying decoupled bounded contexts to a monolithic DB schema."
+    ]);
+  };
+
+  const handleResolveContradiction = () => {
+    setGlobalCfdi(0.05);
+    setActiveContradictions([]);
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col items-center p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-5xl">
@@ -22,9 +40,24 @@ const App: React.FC = () => {
           <p className="mt-3 text-slate-400 text-lg max-w-2xl mx-auto">
             A Pluriversal Environment for rendering Epistemic Schemas and maintaining Golden Scar Superpositions.
           </p>
+          <div className="mt-4">
+             <button
+                onClick={handleSimulateContradiction}
+                className="text-xs px-3 py-1 bg-slate-800 border border-slate-600 rounded text-slate-400 hover:text-white transition-colors"
+             >
+                [Dev] Simulate CFDI Spike
+             </button>
+          </div>
         </header>
 
         <main>
+          {/* Epistemic Escrow Circuit Breaker UI injected as global bounded context guard */}
+          <EpistemicEscrowBreaker
+            cfdiScore={globalCfdi}
+            contradictions={activeContradictions}
+            onResolve={handleResolveContradiction}
+          />
+
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <button
               onClick={() => setActiveTab('loom')}
