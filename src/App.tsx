@@ -10,6 +10,13 @@ const protocolData = {
   "Testing_Hypothesis": "ECO reduces context consumption variance by ≥40% in multi-step workflows."
 };
 
+/**
+ * App is the root component of the Meta-Cognitive Context Loom application.
+ * It manages the global state including active tabs and the Contradiction/Fracture/Divergence Index (CFDI),
+ * enforcing systemic constraints through the Epistemic Escrow Circuit Breaker.
+ *
+ * @returns {JSX.Element} The rendered application component.
+ */
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'protocol' | 'lexicon' | 'loom'>('loom');
 
@@ -17,6 +24,10 @@ const App: React.FC = () => {
   const [globalCfdi, setGlobalCfdi] = useState<number>(0.08);
   const [activeContradictions, setActiveContradictions] = useState<string[]>([]);
 
+  /**
+   * Simulates a CFDI spike which triggers the EpistemicEscrowBreaker.
+   * @returns {void}
+   */
   const handleSimulateContradiction = () => {
     setGlobalCfdi(0.18);
     setActiveContradictions([
@@ -25,6 +36,10 @@ const App: React.FC = () => {
     ]);
   };
 
+  /**
+   * Resolves the simulated contradiction, lowering the CFDI and dismissing the breaker.
+   * @returns {void}
+   */
   const handleResolveContradiction = () => {
     setGlobalCfdi(0.05);
     setActiveContradictions([]);

@@ -1,28 +1,57 @@
-
 import React, { useState } from 'react';
 
+/**
+ * ChevronRightIcon renders a right-facing chevron SVG.
+ * @param {Object} props - Component properties.
+ * @param {string} [props.className] - Optional CSS classes.
+ * @returns {JSX.Element} SVG element.
+ */
 const ChevronRightIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={className ?? "w-4 h-4"}>
     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
   </svg>
 );
 
+/**
+ * ChevronDownIcon renders a down-facing chevron SVG.
+ * @param {Object} props - Component properties.
+ * @param {string} [props.className] - Optional CSS classes.
+ * @returns {JSX.Element} SVG element.
+ */
 const ChevronDownIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={className ?? "w-4 h-4"}>
     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
   </svg>
 );
 
+/**
+ * Props for the JsonViewerNode component.
+ */
 interface JsonViewerNodeProps {
+  /** The key of the JSON node. */
   nodeKey: string;
+  /** The value of the JSON node. */
   value: unknown;
+  /** The nesting level of the node. */
   level: number;
+  /** Whether the node is the root node. */
   isRoot?: boolean;
 }
 
+/**
+ * JsonViewerNode represents a single node in the JSON viewer.
+ * It recursively renders objects and arrays, and formats primitive values.
+ * @param {JsonViewerNodeProps} props - The node properties.
+ * @returns {JSX.Element} The rendered JSON node.
+ */
 const JsonViewerNode: React.FC<JsonViewerNodeProps> = ({ nodeKey, value, level, isRoot = false }) => {
   const [isExpanded, setIsExpanded] = useState(isRoot);
 
+  /**
+   * Toggles the expansion state of the node.
+   * @param {React.MouseEvent} e - The mouse event.
+   * @returns {void}
+   */
   const toggleExpand = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsExpanded(prev => !prev);
@@ -33,6 +62,11 @@ const JsonViewerNode: React.FC<JsonViewerNodeProps> = ({ nodeKey, value, level, 
 
   const indentStyle = { paddingLeft: `${isRoot ? 0 : level * 1.5}rem` };
 
+  /**
+   * Renders the primitive value with appropriate syntax highlighting.
+   * @param {unknown} val - The primitive value to render.
+   * @returns {JSX.Element | null} The formatted value element.
+   */
   const renderValue = (val: unknown) => {
     if (val === null) {
       return <span className="text-slate-500">null</span>;
@@ -89,10 +123,19 @@ const JsonViewerNode: React.FC<JsonViewerNodeProps> = ({ nodeKey, value, level, 
   );
 };
 
+/**
+ * Props for the JsonViewer component.
+ */
 interface JsonViewerProps {
+  /** The data object to be visualized. */
   data: object;
 }
 
+/**
+ * JsonViewer is a recursive component that renders a JSON-like object with expandable/collapsible nodes.
+ * @param {JsonViewerProps} props - The viewer properties.
+ * @returns {JSX.Element} The JSON viewer interface.
+ */
 export const JsonViewer: React.FC<JsonViewerProps> = ({ data }) => {
   return (
     <div className="bg-slate-800 rounded-lg p-4 font-mono text-sm shadow-lg border border-slate-700">
