@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 
+/**
+ * ParaconsistentLoom is a UI component for capturing and weighting both AI formalism
+ * and human phronesis. It places conflicting frames into a "Golden Scar Superposition"
+ * rather than attempting to auto-resolve them.
+ *
+ * @returns {JSX.Element} The paraconsistent loom UI.
+ */
 export const ParaconsistentLoom: React.FC = () => {
   const [aiInput, setAiInput] = useState('');
   const [humanInput, setHumanInput] = useState('');
   const [isEscrowed, setIsEscrowed] = useState(false);
 
+  /**
+   * Validates inputs and binds them into epistemic escrow if both are present.
+   * @returns {void}
+   */
   const handleSynthesize = () => {
     if (aiInput.trim() !== '' && humanInput.trim() !== '') {
       setIsEscrowed(true);

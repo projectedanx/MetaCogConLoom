@@ -1,11 +1,25 @@
 import React from 'react';
 
+/**
+ * Props for the EpistemicEscrowBreaker component.
+ */
 interface EpistemicEscrowBreakerProps {
+  /** The current Contradiction/Fracture/Divergence Index score. */
   cfdiScore: number;
+  /** List of active contradictions preventing automated progression. */
   contradictions: string[];
+  /** Callback triggered when human phronesis resolves the state. */
   onResolve: () => void;
 }
 
+/**
+ * EpistemicEscrowBreaker visually halts the system when the CFDI score exceeds 0.15.
+ * It enforces the Agent Inversion Strategy, stopping automated progression
+ * until human intervention resolves the topological contradictions.
+ *
+ * @param {EpistemicEscrowBreakerProps} props - The component props.
+ * @returns {JSX.Element | null} The escrow breaker UI, or null if CFDI <= 0.15.
+ */
 export const EpistemicEscrowBreaker: React.FC<EpistemicEscrowBreakerProps> = ({
   cfdiScore,
   contradictions,
