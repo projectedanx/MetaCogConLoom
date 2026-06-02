@@ -13,12 +13,18 @@ The Meta-Cognitive Context Loom Visualizer is a sophisticated React application 
 ## Architectural Synergies (AI x Human)
 
 This visualizer does not merely render data; it enforces an architectural mandate where neither the AI nor the Human can resolve complex tension alone:
-- **AI Provision:** Maintains the multi-dimensional structure (Causal Validation Matrix, DRP-LEXICON-992). Generates rigid structural constraints and maps the negative space of known failure modes.
-- **Human Provision:** Injects Phronesis (practical wisdom) via the **Paraconsistent Loom**, weighting contradictions without collapsing them. Navigates the positive space left open by the AI's boundaries.
+- **AI Provision (Topological Constraint Mapping):** Maintains the multi-dimensional structure (Causal Validation Matrix, DRP-LEXICON-992). Generates rigid structural constraints and maps the negative space of known failure modes. Evaluates structural integrity and calculates the Contradiction/Fracture/Divergence Index (CFDI).
+- **Human Provision (Phronesis):** Injects practical wisdom via the **Paraconsistent Loom**, weighting contradictions without collapsing them. Navigates the positive space left open by the AI's boundaries.
 
 ## The Agent Inversion Strategy
 
-The repository implements an **Epistemic Escrow Circuit Breaker**. Instead of the AI attempting to hallucinate a resolution when contradictions peak, the system physically halts execution when the Contradiction/Fracture/Divergence Index (CFDI) exceeds 0.15. It explicitly requires the human to apply a topological deformer to resolve the state, ensuring that agentic autonomy is derived from its rigorous ability to refuse invalid states.
+The repository implements an **Epistemic Escrow Circuit Breaker**. Traditional AI agents attempt to execute tasks in the positive space, often hallucinating when encountering ambiguity. The **Inversion Strategy** dictates that the AI Agent maps the boundaries and halts at the edge of epistemic uncertainty (CFDI > 0.15).
+
+Instead of the AI attempting to hallucinate a resolution when contradictions peak, the system physically halts execution. It explicitly requires the human to apply a topological deformer to resolve the state, ensuring that agentic autonomy is derived from its rigorous ability to refuse invalid states.
+
+## 0xCARTO Synthesis
+
+The full repository topology, CI/CD pipeline cartography, dependency matrix, and cultural artifacts log are explicitly documented in the [0xCARTO Synthesis Document](docs/0xCARTO_SYNTHESIS.md).
 
 ## Developer Guide
 
